@@ -49,9 +49,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: start;
-  justify-content: center;
-  gap: 5px;
-	
+	justify-content: center;
+	gap: 5px;
+
 	color: 'white';
 	font-size: 2.5rem;
 	width: 400px;
@@ -72,7 +72,38 @@ body {
 	border-style: none;
 	background-color: #001e50;
 	color: white;
-  padding: 0px 25px;
+	padding: 0px 25px;
 
 	font-size: 0.9rem;
 }
+
+.racing-section {
+	margin-top: 90px;
+	background-color: white;
+	color: #001e50;
+	width: 500px;
+	box-shadow: 0 0px 15px -1px rgba(0, 0, 0, 1);
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: 20px;
+
+	.title {
+		font-size: 2.5rem;
+
+		text-align: center;
+		font-weight: 700;
+		
+	}
+
+	.text {
+		
+
+		font-weight: 500;
+		font-size: 1.1rem;
+	}
+}
+
