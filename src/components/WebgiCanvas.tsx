@@ -8,6 +8,7 @@ import {
 	SSAOPlugin,
 	BloomPlugin,
 	GammaCorrectionPlugin,
+	Vector3,
 } from 'webgi';
 
 import gsap from 'gsap';
@@ -19,9 +20,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export const WebgiCanvas = () => {
-	const [position, setPosition] = useState(null);
-	const [target, setTarget] = useState(null);
-	const [globalViewer, setGlobalViewer] = useState(null);
+	const [position, setPosition] = useState<Vector3>();
+	const [target, setTarget] = useState<Vector3>();
+	const [globalViewer, setGlobalViewer] = useState<ViewerApp>();
 
 	const setupViewer = async () => {
 		// Initialize the viewer
@@ -47,7 +48,7 @@ export const WebgiCanvas = () => {
 		viewer.renderer.refreshPipeline();
 
 		// Import and add a GLB file.
-		await viewer.load('./assets/carro_3.glb');
+		await viewer.load('./assets/car_model.glb');
 
 		const plugin = viewer.getPlugin(TonemapPlugin);
 		if (plugin && plugin.config) {
@@ -76,8 +77,8 @@ export const WebgiCanvas = () => {
 
 
 	useEffect(() => {
-		setupViewer();
-	});
+		void setupViewer();
+	},[]);
 
-	return <div id="webgi-canvas">WebgiCanvas</div>;
+	return <canvas id="webgi-canvas">WebgiCanvas</canvas>;
 };

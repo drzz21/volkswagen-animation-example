@@ -10,8 +10,8 @@ function App() {
 		<>
 			<Navbar />
 			<Jumbotron />
-      <Racing/>
-      <WebgiCanvas/>
+			<Racing />
+			<WebgiCanvas />
 		</>
 	);
 }
