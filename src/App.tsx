@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import './App.scss';
 import { Jumbotron } from './components/Jumbotron';
 import { Racing } from './components/Racing';
+import { WebgiCanvas } from './components/WebgiCanvas';
 
 function App() {
 	return (
@@ -10,6 +11,7 @@ function App() {
 			<Navbar />
 			<Jumbotron />
       <Racing/>
+      <WebgiCanvas/>
 		</>
 	);
 }
