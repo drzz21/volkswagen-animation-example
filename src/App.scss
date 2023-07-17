@@ -7,8 +7,7 @@
 body {
 	background-color: #001e50;
 	margin: 0;
-	height: 2000px;
-	
+	// height: 2000px;
 }
 
 .menu {
@@ -79,10 +78,16 @@ body {
 	font-size: 0.9rem;
 }
 
+.container-racing-section{
+	background-color: white;
+	height: 500px;
+	width: 100%;
+}
+
 .racing-section {
 	margin-top: 90px;
-	background-color: white;
-	color: #001e50;
+	background-color: #001e50;
+	color: white;
 	width: 500px;
 	box-shadow: 0 0px 15px -1px rgba(0, 0, 0, 1);
 	padding: 30px;
@@ -98,19 +103,17 @@ body {
 
 		text-align: center;
 		font-weight: 700;
-		
 	}
 
 	.text {
-		
-
 		font-weight: 500;
 		font-size: 1.1rem;
 	}
 }
 
-#webgi-canvas{
-	height: 100vh;
+#webgi-canvas {
+	padding-top: 370px;
+	// height: 100vh;
 	width: 100%;
 	// position: sticky;
 	position: fixed;
@@ -118,5 +121,14 @@ body {
 	// border: 1px solid red;
 	// top: 20px;
 	box-sizing: border-box;
+	filter: drop-shadow(0 0 1rem black);
 }
 
+.racing-square {
+	background-color: red;
+	height: 200px;
+	width: 200px;
+	position: sticky;
+	top: 25px;
+
+}
