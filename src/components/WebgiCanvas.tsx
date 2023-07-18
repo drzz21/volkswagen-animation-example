@@ -20,8 +20,8 @@ import { useEffect, useState } from 'react';
 // gsap.registerPlugin(ScrollTrigger);
 
 export const WebgiCanvas = () => {
-	const [position, setPosition] = useState<Vector3>();
-	const [target, setTarget] = useState<Vector3>();
+	const [globalPosition, setGlobalPosition] = useState<Vector3>();
+	const [globalTarget, setGlobalTarget] = useState<Vector3>();
 	const [globalViewer, setGlobalViewer] = useState<ViewerApp>();
 
 	const setupViewer = async () => {
@@ -34,7 +34,8 @@ export const WebgiCanvas = () => {
 
 		// Add some plugins
 		// console.log(typeof AssetManagerPlugin);
-		const manager = await viewer.addPlugin(AssetManagerPlugin);
+		// const manager = 
+		await viewer.addPlugin(AssetManagerPlugin);
 
 		await viewer.addPlugin(GBufferPlugin);
 		await viewer.addPlugin(new ProgressivePlugin(32));
@@ -59,9 +60,11 @@ export const WebgiCanvas = () => {
 		const target = viewer.scene.activeCamera.target;
 		// const viewer = viewer;
 
-		setPosition(position);
-		setTarget(target);
+		setGlobalPosition(position);
+		setGlobalTarget(target);
 		setGlobalViewer(viewer)
+
+		console.log(globalPosition,globalTarget,globalViewer);
 
 		viewer.scene.activeCamera.controls!.enabled = false;
 		position.set(-6.96, 0.85, 4.55);
