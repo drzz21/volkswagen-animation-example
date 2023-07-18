@@ -1,6 +1,6 @@
 export const Navbar = () => {
 	return (
-		<nav className="menu">
+		<nav className="menu" id='top-container'>
 			<div>
 				<svg
 					aria-hidden="true"

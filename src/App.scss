@@ -85,7 +85,7 @@ body {
 }
 
 .racing-section {
-	margin-top: 90px;
+	margin-top: 150px;
 	background-color: #001e50;
 	color: white;
 	width: 500px;
@@ -112,15 +112,16 @@ body {
 }
 
 #webgi-canvas {
-	padding-top: 370px;
+	// margin-top: 370px;
 	// height: 100vh;
 	width: 100%;
 	// position: sticky;
 	position: fixed;
-	top: 0;
+	top: 360px;
 	// border: 1px solid red;
 	// top: 20px;
 	box-sizing: border-box;
+	
 	filter: drop-shadow(0 0 1rem black);
 }
 
@@ -132,3 +133,12 @@ body {
 	top: 25px;
 
 }
+
+.bitEverything{
+	height: 500px;
+	background-color: grey;
+}
+
+// #top-container{
+// 	border:1px solid red;
+// }

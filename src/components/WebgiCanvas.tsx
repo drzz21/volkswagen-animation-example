@@ -11,13 +11,13 @@ import {
 	Vector3,
 } from 'webgi';
 
-import gsap from 'gsap';
+// import gsap from 'gsap';
 
 import { useEffect, useState } from 'react';
 
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 export const WebgiCanvas = () => {
 	const [position, setPosition] = useState<Vector3>();
