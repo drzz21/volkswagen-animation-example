@@ -1,7 +1,7 @@
 export const Racing = () => {
 	return (
 		<>
-			<div className='container-racing-section'>
+			<div id='racing-section' className='container-racing-section'>
 				<section className="racing-section">
 					<span className="title">A racing GTI</span>
 					<span className="text">

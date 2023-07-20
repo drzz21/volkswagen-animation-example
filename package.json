@@ -10,14 +10,14 @@
   "dependencies": {
     "gsap": "^3.12.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zustand": "^4.3.9"
   },
   "devDependencies": {
-    "@types/webgi": "https://storage.googleapis.com/dist.pixotronics.com/webgi/runtime/bundle-types-0.7.9.tgz",
-    "webgi": "https://storage.googleapis.com/dist.pixotronics.com/webgi/runtime/bundle-0.7.9.tgz",
-    "@types/three": "^0.139.0",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "@types/three": "^0.139.0",
+    "@types/webgi": "https://storage.googleapis.com/dist.pixotronics.com/webgi/runtime/bundle-types-0.7.9.tgz",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
     "@vitejs/plugin-react": "^4.0.1",
@@ -26,6 +26,7 @@
     "eslint-plugin-react-refresh": "^0.4.1",
     "sass": "^1.63.6",
     "typescript": "^5.1.3",
-    "vite": "^4.4.0"
+    "vite": "^4.4.0",
+    "webgi": "https://storage.googleapis.com/dist.pixotronics.com/webgi/runtime/bundle-0.7.9.tgz"
   }
 }
