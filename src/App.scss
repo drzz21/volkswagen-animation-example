@@ -1,32 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
+@import 'styles/navbar';
+@import 'styles/jumbotron-top';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;0,900;1,400;1,600;1,800;1,900&display=swap');
 
+html{
+	
+}
 * {
 	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;
 }
 
 body {
 	background-color: #001e50;
 	margin: 0;
 	// height: 2000px;
-}
-
-.menu {
-	position: sticky;
-	top: 0;
-	z-index: 1;
-	
-	height: 50px;
-	display: flex;
-	justify-content: space-between;
-	padding: 0px 40px;
-	background-color: white;
-	align-items: center;
-	box-shadow: 0 0px 15px -1px rgba(255, 255, 255, 1);
-}
-
-.menu > div {
-	color: #001e50;
-	font-size: 1.5rem;
 }
 
 .container {
@@ -41,36 +28,6 @@ body {
 	position: relative;
 }
 
-.jumbotron {
-	height: 450px;
-	border-radius: 5px;
-	background-color: red;
-	background-image: url('assets/golf-header.jpg');
-	background-position: 50%;
-	background-size: cover;
-}
-
-.jumbotron-title {
-	display: flex;
-	flex-direction: column;
-	align-items: start;
-	justify-content: center;
-	gap: 5px;
-
-	color: 'white';
-	font-size: 2.5rem;
-	width: 400px;
-	height: 150px;
-	text-align: center;
-	position: absolute;
-	bottom: -55px;
-	left: 25px;
-	padding: 0px 10px;
-	background-color: white;
-	font-weight: 800;
-	box-shadow: 0 0px 15px -1px rgba(0, 0, 0, 1);
-}
-
 .button {
 	border-radius: 100px;
 	height: 35px;
@@ -82,14 +39,14 @@ body {
 	font-size: 0.9rem;
 }
 
-.container-racing-section{
+.container-racing-section {
 	background-color: white;
 	height: 500px;
 	width: 100%;
 }
 
 .racing-section {
-	margin-top: 150px;
+	// top: 50px;
 	background-color: #001e50;
 	color: white;
 	width: 500px;
@@ -100,18 +57,21 @@ body {
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	right: 20px;
+	right: 80px;
+	margin-top: 100px;
 
 	.title {
 		font-size: 2.5rem;
 
 		text-align: center;
-		font-weight: 700;
+		font-weight: 600;
+		font-style: italic;
 	}
 
 	.text {
-		font-weight: 500;
-		font-size: 1.1rem;
+		font-weight: 600;
+		font-size: 1.5rem;
+		font-style: italic;
 	}
 }
 
@@ -125,7 +85,7 @@ body {
 	// border: 1px solid red;
 	// top: 20px;
 	box-sizing: border-box;
-	
+
 	filter: drop-shadow(0 0 1rem black);
 }
 
@@ -135,17 +95,42 @@ body {
 	width: 200px;
 	position: sticky;
 	top: 25px;
-
 }
 
-.bitEverything{
-	height: 1000px;
-	background-color: grey;
+.bitEverything {
+	// height: 650px;
+	height: calc(100vh - 50px);
+	// height: 100vh;
+	background-color: white;
+	
+	// margin: 60px;
+	padding: 20px;
 	color: white;
 	font-size: 40px;
 	font-weight: bold;
+	border: 60px solid #001e50;
+	
 }
 
 // #top-container{
 // 	border:1px solid red;
 // }
+.article {
+	font-weight: 500;
+	font-size: 1.35rem;
+	// height: calc(100% - 40px);
+	display: grid;
+	text-align: justify;
+	place-content: center;
+	background-color: #001e50;
+	padding: 30px;
+	width: 800px;
+	box-shadow: 0 0px 15px -1px rgba(0, 0, 0, 1);
+}
+
+.summary{
+	height: 600px;
+	border: 40px solid white;
+	color: white;
+	font-size: 1.5rem;
+}

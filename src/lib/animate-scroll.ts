@@ -39,27 +39,37 @@ export const scrollAnimation = (
 		},
 	})
 		.to(position, {
-			x: 0.818,
-			y: 0.422,
-			z: 5.02257,
+			// x: 0.818,
+			// y: 0.422,
+			// z: 5.02257,
 
+			//new
+			x: 5.336,
+			y: 0.534,
+			z: 2.825,
 			scrollTrigger: {
 				trigger: '#bitEverything',
 				start: 'top bottom',
-				end: 'top top',
+				end: 'center 40%',
+				// markers:true,
 				scrub: 2,
 				immediateRender: false,
+				// markers:true
 			},
 		})
 		.to(target, {
-			x: -0.2024,
-			y: 0.04947,
-			z: 1.710599,
+			// x: -0.2024,
+			// y: 0.04947,
+			// z: 1.710599,
 
+			//new
+			x: -0.2029,
+			y: -0.03117,
+			z: 0.48842,
 			scrollTrigger: {
 				trigger: '#bitEverything',
 				start: 'top bottom',
-				end: 'top top',
+				end: 'center 40%',
 				scrub: 2,
 				immediateRender: false,
 			},

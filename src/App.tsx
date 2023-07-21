@@ -1,9 +1,10 @@
 import { Navbar } from './components/Navbar';
 import './App.scss';
 import { Jumbotron } from './components/Jumbotron';
-import { Racing } from './components/Racing';
+import { Racing } from './components/Intro';
 import { WebgiCanvas } from './components/WebgiCanvas';
-import { ABitOfEverything } from './components/ABitOfEverything';
+import { ABitOfEverything } from './components/Design';
+import { Summary } from './components/Summary';
 
 import gsap from 'gsap';
 
@@ -20,6 +21,7 @@ function App() {
 			<Racing />
 			<ABitOfEverything />
 			<WebgiCanvas />
+			<Summary/>
 		</>
 	);
 }
