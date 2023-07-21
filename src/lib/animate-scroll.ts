@@ -3,8 +3,11 @@ import gsap from 'gsap';
 import { Vector3 } from 'three';
 import { ViewerApp } from 'webgi';
 
-
-export const scrollAnimation = (target:Vector3,position:Vector3,viewer:ViewerApp) => {
+export const scrollAnimation = (
+	target: Vector3,
+	position: Vector3,
+	viewer: ViewerApp
+) => {
 	const tl = gsap.timeline();
 
 	// empezamos la animacion de nuestro timeline
@@ -31,31 +34,34 @@ export const scrollAnimation = (target:Vector3,position:Vector3,viewer:ViewerApp
 
 			immediateRender: false,
 		},
-	}).to(position, {
-		x: 0.818,
-		y: 0.4220,
-		z: 5.02257,
-
-		scrollTrigger: {
-			trigger: '#bitEverything',
-			start: 'top bottom',
-			end: 'top top',
-			scrub: 2,
-			immediateRender: false,
+		onUpdate: () => {
+			viewer.setDirty();
 		},
-	
-	}).to(target, {
-		x: -0.2024,
-		y: 0.04947,
-		z: 1.710599,
+	})
+		.to(position, {
+			x: 0.818,
+			y: 0.422,
+			z: 5.02257,
 
-		scrollTrigger: {
-			trigger: '#bitEverything',
-			start: 'top bottom',
-			end: 'top top',
-			scrub: 2,
-			immediateRender: false,
-		},
+			scrollTrigger: {
+				trigger: '#bitEverything',
+				start: 'top bottom',
+				end: 'top top',
+				scrub: 2,
+				immediateRender: false,
+			},
+		})
+		.to(target, {
+			x: -0.2024,
+			y: 0.04947,
+			z: 1.710599,
 
-	});
+			scrollTrigger: {
+				trigger: '#bitEverything',
+				start: 'top bottom',
+				end: 'top top',
+				scrub: 2,
+				immediateRender: false,
+			},
+		});
 };

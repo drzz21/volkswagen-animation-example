@@ -4,16 +4,16 @@ import {
 	GBufferPlugin,
 	ProgressivePlugin,
 	TonemapPlugin,
-	SSRPlugin,
+	// SSRPlugin,
 	SSAOPlugin,
 	BloomPlugin,
 	GammaCorrectionPlugin,
-	Vector3,
+	// Vector3,
 } from 'webgi';
 
 // import gsap from 'gsap';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import { scrollAnimation } from '../lib/animate-scroll';
 
