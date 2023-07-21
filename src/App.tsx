@@ -8,17 +8,10 @@ import { ABitOfEverything } from './components/ABitOfEverything';
 import gsap from 'gsap';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useEffect } from 'react';
-import { scrollAnimation } from './lib/animate-scroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-
-
-	useEffect(() => {
-		scrollAnimation();
-	}, []);
 
 	return (
 		<>

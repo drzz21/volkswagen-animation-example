@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import { useCoordinatesStore } from '../store/coordinates';
+
 import { Vector3 } from 'three';
 import { ViewerApp } from 'webgi';
 
