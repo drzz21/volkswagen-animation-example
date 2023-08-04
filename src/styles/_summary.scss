@@ -1,0 +1,41 @@
+.summary {
+	padding: 50px 400px;
+
+	color: black;
+	font-size: 1.4rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.title {
+		font-size: 3rem;
+	}
+
+	img {
+		height: 350px;
+		display: inline-block;
+	}
+
+	&-element {
+		display: flex;
+
+		&:nth-child(even){
+			flex-direction: row-reverse;
+		}
+		// flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		margin: 25px 0;
+		p {
+			font-size: 1.15rem;
+			span {
+				font-size: 1.15rem;
+				font-weight: bold;
+				display: block;
+			}
+		}
+	}
+}

@@ -54,6 +54,7 @@ export const scrollAnimation = (
 				// markers:true,
 				scrub: 2,
 				immediateRender: false,
+				
 				// markers:true
 			},
 		})
@@ -72,6 +73,7 @@ export const scrollAnimation = (
 				end: 'center 40%',
 				scrub: 2,
 				immediateRender: false,
+				
 			},
 		});
 };

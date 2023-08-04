@@ -1,10 +1,53 @@
 .jumbotron {
-	height: 500px;
-	border-radius: 5px;
-	background-color: red;
-	background-image: url('assets/golf-header.jpg');
-	background-position: 90%;
-	background-size: cover;
+	&-container {
+		display: flex;
+		justify-items: center;
+		align-items: center;
+		background-color: white;
+		height: auto;
+	}
+
+	&-image {
+		height: 700px;
+		border-radius: 5px;
+		background-color: red;
+		background-image: url('assets/golf-header.jpg');
+		background-position: 45% 60%;
+		background-size: cover;
+		width: 50%;
+	}
+
+	&-description {
+		width: 50%;
+		height: 100%;
+		display: grid;
+		place-content: center;
+		
+		.container {
+			// width: 50%;
+			text-align: left;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 110px;
+			
+
+			.title {
+				font-weight: bold;
+				// margin: 5px;
+				font-size: 3rem;
+			}
+			.subtitle {
+				font-size: 1.15rem;
+				font-weight: bold;
+			}
+
+			.content{
+				font-size:1.05rem;
+
+			}
+		}
+	}
 }
 
 .jumbotron-title {

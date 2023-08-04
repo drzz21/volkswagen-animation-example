@@ -1,5 +1,7 @@
 @import 'styles/navbar';
 @import 'styles/jumbotron-top';
+@import 'styles/summary';
+@import 'styles/footer';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;0,900;1,400;1,600;1,800;1,900&display=swap');
 
 html{
@@ -11,69 +13,12 @@ html{
 }
 
 body {
-	background-color: #001e50;
+	// background-color: #001e50;
 	margin: 0;
 	// height: 2000px;
 }
 
-.container {
-	color: #001e50;
-	font-size: 1.5rem;
-	height: 450px;
-	background-color: white;
-	/* margin: 20px 20px; */
-	border-radius: 5px;
-	border: none;
-	font-weight: 600;
-	position: relative;
-}
 
-.button {
-	border-radius: 100px;
-	height: 35px;
-	border-style: none;
-	background-color: #001e50;
-	color: white;
-	padding: 0px 25px;
-
-	font-size: 0.9rem;
-}
-
-.container-racing-section {
-	background-color: white;
-	height: 500px;
-	width: 100%;
-}
-
-.racing-section {
-	// top: 50px;
-	background-color: #001e50;
-	color: white;
-	width: 500px;
-	box-shadow: 0 0px 15px -1px rgba(0, 0, 0, 1);
-	padding: 30px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	right: 80px;
-	margin-top: 100px;
-
-	.title {
-		font-size: 2.5rem;
-
-		text-align: center;
-		font-weight: 600;
-		font-style: italic;
-	}
-
-	.text {
-		font-weight: 600;
-		font-size: 1.5rem;
-		font-style: italic;
-	}
-}
 
 #webgi-canvas {
 	// margin-top: 370px;
@@ -87,50 +32,4 @@ body {
 	box-sizing: border-box;
 
 	filter: drop-shadow(0 0 1rem black);
-}
-
-.racing-square {
-	background-color: red;
-	height: 200px;
-	width: 200px;
-	position: sticky;
-	top: 25px;
-}
-
-.bitEverything {
-	// height: 650px;
-	height: calc(100vh - 50px);
-	// height: 100vh;
-	background-color: white;
-	
-	// margin: 60px;
-	padding: 20px;
-	color: white;
-	font-size: 40px;
-	font-weight: bold;
-	border: 60px solid #001e50;
-	
-}
-
-// #top-container{
-// 	border:1px solid red;
-// }
-.article {
-	font-weight: 500;
-	font-size: 1.35rem;
-	// height: calc(100% - 40px);
-	display: grid;
-	text-align: justify;
-	place-content: center;
-	background-color: #001e50;
-	padding: 30px;
-	width: 800px;
-	box-shadow: 0 0px 15px -1px rgba(0, 0, 0, 1);
-}
-
-.summary{
-	height: 600px;
-	border: 40px solid white;
-	color: white;
-	font-size: 1.5rem;
 }
