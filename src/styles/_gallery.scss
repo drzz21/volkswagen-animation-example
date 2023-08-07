@@ -16,14 +16,28 @@
 	}
 
 	&-main-img {
-		
 		grid-column: 1 / span 1;
 		grid-row: 1 / span 3;
-		img{
+		img {
 			width: 100%;
-			border: 1px solid #001e50;
+			box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
+			-webkit-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
+			-moz-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
 		}
-		
+		@keyframes flash {
+			from {
+				opacity: 0;
+			}		
+
+			to {
+				opacity: 100%;
+				
+			}
+		}
+		&.animate {
+			animation: flash 0.8s linear;
+			animation-fill-mode: forwards;
+		}
 	}
 
 	&-img-list {
@@ -34,9 +48,16 @@
 		grid-template-rows: repeat(3, 1fr);
 		justify-content: center;
 		align-items: center;
-		
+
 		img {
 			width: 100%;
+			box-shadow: 2px 0px 3px -3px rgba(0, 0, 0, 0.76);
+			-webkit-box-shadow: 2px 0px 3px -3px rgba(0, 0, 0, 0.76);
+			-moz-box-shadow: 2px 0px 3px -3px rgba(0, 0, 0, 0.76);
+			&:hover {
+				filter: opacity(0.5);
+				cursor: pointer;
+			}
 		}
 	}
 }

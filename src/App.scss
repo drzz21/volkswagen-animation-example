@@ -6,8 +6,7 @@
 @import 'styles/more-info';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;0,900;1,400;1,600;1,800;1,900&display=swap');
 
-html{
-	
+html {
 }
 * {
 	font-family: 'Montserrat', sans-serif;
@@ -21,22 +20,22 @@ body {
 	// height: 2000px;
 }
 
-
-
 #webgi-canvas {
 	// margin-top: 370px;
 	// height: 100vh;
 	aspect-ratio: 3 / 2;
-	
+
 	// width: 100%;
 	// position: sticky;
 	// position: fixed;
 	// top: 360px;
 	width: 100%;
-	border: 1px solid #001e50;
+	// border: 1px solid #001e50;
+	box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
+	-webkit-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
+	-moz-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
 	// top: 20px;
 	box-sizing: border-box;
 	// background-color: lightgray;
-
-	
 }
+

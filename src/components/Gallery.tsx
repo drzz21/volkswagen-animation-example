@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { WebgiCanvas } from './WebgiCanvas';
 export const Gallery = () => {
 	const baseURL = 'assets/img/gallery/';
@@ -12,7 +12,25 @@ export const Gallery = () => {
 	const [image, setImage] = useState<string>(options[0].imgUrl);
 	const [show3d, setShow3d] = useState<boolean>(false);
 
+	const containerRef = useRef(null);
+	const timeoutId = useRef<number>(null); // creamos una referencia para guardar el ID del timeout
+
 	const changeImage = (imgUrl: string, i: number) => {
+		containerRef.current.classList.remove("animate");
+		if (timeoutId.current) {
+			clearTimeout(timeoutId.current);
+		}
+		
+		setTimeout(() => {
+			containerRef.current.classList.add("animate");
+		  }, 10)
+		
+
+		const timeout = setTimeout(() => {
+			containerRef.current.classList.remove('animate');
+		}, 800);
+		timeoutId.current = timeout;
+
 		if (i == options.length - 1) {
 			setShow3d(true);
 			return;
@@ -25,18 +43,18 @@ export const Gallery = () => {
 		<>
 			<span className="title">Gallery</span>
 			<div className="gallery-container">
-				{show3d ? (
-					<div>
-						<WebgiCanvas/>
-						{/* <span>SE RENDERIZA</span> */}
-					</div>
-				) : (
-					<>
-						<div className="gallery-main-img">
-							<img src={`${baseURL}${image}`} alt="" />
+				<div className="gallery-main-img" ref={containerRef}>
+					{show3d ? (
+						<div>
+							<WebgiCanvas />
+							{/* <span>SE RENDERIZA</span> */}
 						</div>
-					</>
-				)}
+					) : (
+						<>
+							<img src={`${baseURL}${image}`} alt="" />
+						</>
+					)}
+				</div>
 				<div className="gallery-img-list">
 					{options.map(({ imgUrl }, i) => (
 						<div
