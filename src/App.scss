@@ -26,13 +26,17 @@ body {
 #webgi-canvas {
 	// margin-top: 370px;
 	// height: 100vh;
-	width: 100%;
+	aspect-ratio: 3 / 2;
+	
+	// width: 100%;
 	// position: sticky;
-	position: fixed;
-	top: 360px;
-	// border: 1px solid red;
+	// position: fixed;
+	// top: 360px;
+	width: 100%;
+	border: 1px solid #001e50;
 	// top: 20px;
 	box-sizing: border-box;
+	// background-color: lightgray;
 
-	filter: drop-shadow(0 0 1rem black);
+	
 }

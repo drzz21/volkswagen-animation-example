@@ -15,7 +15,7 @@ import {
 
 import { useEffect } from 'react';
 
-import { scrollAnimation } from '../lib/animate-scroll';
+// import { scrollAnimation } from '../lib/animate-scroll';
 
 
 export const WebgiCanvas = () => {
@@ -49,23 +49,23 @@ export const WebgiCanvas = () => {
 
 		const plugin = viewer.getPlugin(TonemapPlugin);
 		if (plugin && plugin.config) {
-			plugin.config.clipBackground = true;
+			// plugin.config.clipBackground = true;
 		}
 
 		const position = viewer.scene.activeCamera.position;
 		const target = viewer.scene.activeCamera.target;
 
 
-		viewer.scene.activeCamera.controls!.enabled = false;
+		// viewer.scene.activeCamera.controls!.enabled = false;
 		//initial position
-		position.set(-6.96, 0.85, 4.55);
-		target.set(0.7, -0.39, 1.54);
+		// position.set(-6.96, 0.85, 4.55);
+		// target.set(0.7, -0.39, 1.54);
 
 		viewer.addEventListener('preFrame', () => {
 			viewer.scene.activeCamera.positionUpdated(true);
 		});
 
-		scrollAnimation(target, position, viewer);
+		// scrollAnimation(target, position, viewer);
 	};
 
 	useEffect(() => {

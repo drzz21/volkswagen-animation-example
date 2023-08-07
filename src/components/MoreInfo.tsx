@@ -21,18 +21,19 @@ export const MoreInfo = () => {
 	];
 
 	return (
-		<div>
+		<section className="more-info-main">
+			<h1>More information</h1>
 			<div className="more-info-container">
 				{options.map(({ title, subtitle, imgRoute }) => (
 					<div className="more-info-item" key={imgRoute}>
 						<img src={`${baseURL}${imgRoute}`} alt="" />
 						<h3>{title}</h3>
-						<span>
+						<a>
 							{subtitle} {'>'}
-						</span>
+						</a>
 					</div>
 				))}
 			</div>
-		</div>
+		</section>
 	);
 };
