@@ -3,7 +3,7 @@ export const Summary = () => {
 		<section className="summary">
 			<h1 className="title">Equipment highlights</h1>
 			<div className="summary-element">
-				<img src="assets/motor.jpg" alt="Motor" />
+				<img src="assets/img/motor.jpg" alt="Motor" />
 
 				<p>
 					<span>Motor</span>
@@ -14,7 +14,7 @@ export const Summary = () => {
 				</p>
 			</div>
 			<div className="summary-element">
-				<img src="assets/performance2.png" alt="Motor" />
+				<img src="assets/img/performance2.png" alt="Motor" />
 
 				<p>
 					<span>Performance</span>
@@ -25,7 +25,7 @@ export const Summary = () => {
 				</p>
 			</div>
 			<div className="summary-element">
-				<img src="assets/interior.png" alt="Motor" />
+				<img src="assets/img/interior.png" alt="Motor" />
 
 				<p>
 					<span>Interior</span>

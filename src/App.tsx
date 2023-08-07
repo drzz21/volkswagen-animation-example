@@ -4,6 +4,8 @@ import { Jumbotron } from './components/Jumbotron';
 
 import { WebgiCanvas } from './components/WebgiCanvas';
 import { Footer } from './components/Footer';
+import { Gallery } from './components/Gallery';
+import { MoreInfo } from './components/MoreInfo';
 
 import { Summary } from './components/Summary';
 
@@ -23,6 +25,8 @@ function App() {
 		
 			{/* <WebgiCanvas /> */}
 			<Summary/>
+			<Gallery/>
+			<MoreInfo/>
 			<Footer/>
 		</>
 	);

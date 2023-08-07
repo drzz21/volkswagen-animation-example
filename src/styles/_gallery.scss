@@ -1,0 +1,41 @@
+.title {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+}
+.gallery {
+	&-container {
+		display: grid;
+		gap: 10px;
+		padding: 0 100px;
+		width: 1200px;
+		margin: auto;
+		grid-template-columns: 80% 1fr;
+		grid-template-rows: repeat(4, 1fr);
+	}
+
+	&-main-img {
+		
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 3;
+		img{
+			width: 100%;
+		}
+		
+	}
+
+	&-img-list {
+		grid-column: 2 / span 1;
+		grid-row: 1 / span 3;
+
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		justify-content: center;
+		align-items: center;
+		
+		img {
+			width: 100%;
+		}
+	}
+}

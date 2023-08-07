@@ -1,0 +1,28 @@
+.more-info {
+	&-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 100px;
+		margin: 20px;
+	}
+
+	&-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		img {
+			height: 150px;
+			width: auto;
+			object-fit: contain;
+		}
+		h3 {
+			font-size: 1.6rem;
+			
+		}
+		span {
+			font-size: 1.2rem;
+		}
+	}
+}
