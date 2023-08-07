@@ -50,9 +50,9 @@ export const Gallery = () => {
 							{/* <span>SE RENDERIZA</span> */}
 						</div>
 					) : (
-						<>
+						<div>
 							<img src={`${baseURL}${image}`} alt="" />
-						</>
+						</div>
 					)}
 				</div>
 				<div className="gallery-img-list">

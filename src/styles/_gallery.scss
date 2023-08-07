@@ -9,32 +9,34 @@
 		display: grid;
 		gap: 10px;
 		padding: 0 100px;
-		width: 1200px;
+		max-width: 1200px;
 		margin: auto;
 		grid-template-columns: 80% 1fr;
 		grid-template-rows: repeat(4, 1fr);
+		@media (max-width: 800px) {
+			padding: 0 20px;
+		}
 	}
 
 	&-main-img {
 		grid-column: 1 / span 1;
 		grid-row: 1 / span 3;
+		box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
+		-webkit-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
+		-moz-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
 		img {
 			width: 100%;
-			box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
-			-webkit-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
-			-moz-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
 		}
 		@keyframes flash {
 			from {
 				opacity: 0;
-			}		
+			}
 
 			to {
 				opacity: 100%;
-				
 			}
 		}
-		&.animate {
+		&.animate div {
 			animation: flash 0.8s linear;
 			animation-fill-mode: forwards;
 		}

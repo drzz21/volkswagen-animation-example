@@ -1,5 +1,8 @@
 .summary {
 	padding: 50px 400px;
+	@media (max-width: 800px) {
+		padding: 50px 20px;
+	}
 
 	color: black;
 	font-size: 1.4rem;
@@ -16,6 +19,11 @@
 	img {
 		height: 350px;
 		display: inline-block;
+		@media (max-width: 800px) {
+			width: 100%;
+			object-fit: contain;
+		}
+
 	}
 
 	&-element {
@@ -23,6 +31,13 @@
 
 		&:nth-child(even){
 			flex-direction: row-reverse;
+			@media (max-width: 800px) {
+				flex-direction: column;
+				text-align: right;
+			}
+		}
+		@media (max-width: 800px) {
+			flex-direction: column;
 		}
 		// flex-direction: row-reverse;
 		justify-content: center;
