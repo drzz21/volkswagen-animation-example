@@ -12,20 +12,27 @@
 		max-width: 1200px;
 		margin: auto;
 		grid-template-columns: 80% 1fr;
-		grid-template-rows: repeat(4, 1fr);
+		grid-template-rows: repeat(3, 1fr);
 		@media (max-width: 800px) {
 			padding: 0 20px;
+			grid-template-rows: 80% 1fr;
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 
 	&-main-img {
 		grid-column: 1 / span 1;
 		grid-row: 1 / span 3;
+		@media (max-width: 800px) {
+			grid-column: 1 / 5;
+			grid-row: 1;
+		}
 		box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
 		-webkit-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
 		-moz-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
 		img {
 			width: 100%;
+			
 		}
 		@keyframes flash {
 			from {
@@ -47,18 +54,27 @@
 		grid-row: 1 / span 3;
 
 		display: grid;
-		grid-template-rows: repeat(3, 1fr);
+
 		justify-content: center;
 		align-items: center;
 
-		img {
-			width: 100%;
-			box-shadow: 2px 0px 3px -3px rgba(0, 0, 0, 0.76);
-			-webkit-box-shadow: 2px 0px 3px -3px rgba(0, 0, 0, 0.76);
-			-moz-box-shadow: 2px 0px 3px -3px rgba(0, 0, 0, 0.76);
-			&:hover {
-				filter: opacity(0.5);
-				cursor: pointer;
+		@media (max-width: 800px) {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: 80% 1fr;
+			gap: 15px;
+			grid-column: 1 / 5;
+			grid-row: 2;
+		}
+		div {
+			img {
+				width: 100%;
+				box-shadow: 2px 0px 3px -3px rgba(0, 0, 0, 0.76);
+				-webkit-box-shadow: 2px 0px 3px -3px rgba(0, 0, 0, 0.76);
+				-moz-box-shadow: 2px 0px 3px -3px rgba(0, 0, 0, 0.76);
+				&:hover {
+					filter: opacity(0.5);
+					cursor: pointer;
+				}
 			}
 		}
 	}

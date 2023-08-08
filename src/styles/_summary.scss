@@ -3,6 +3,9 @@
 	@media (max-width: 800px) {
 		padding: 50px 20px;
 	}
+	@media (max-width: 1600px) {
+		padding: 50px 120px;
+	}
 
 	color: black;
 	font-size: 1.4rem;
@@ -31,12 +34,12 @@
 
 		&:nth-child(even){
 			flex-direction: row-reverse;
-			@media (max-width: 800px) {
+			@media (max-width: 1000px) {
 				flex-direction: column;
 				text-align: right;
 			}
 		}
-		@media (max-width: 800px) {
+		@media (max-width: 1000px) {
 			flex-direction: column;
 		}
 		// flex-direction: row-reverse;
