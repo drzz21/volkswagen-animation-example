@@ -17,9 +17,7 @@ import { useEffect } from 'react';
 
 // import { scrollAnimation } from '../lib/animate-scroll';
 
-
 export const WebgiCanvas = () => {
-
 	const setupViewer = async () => {
 		// Initialize the viewer
 		const viewer = new ViewerApp({
@@ -55,7 +53,6 @@ export const WebgiCanvas = () => {
 		const position = viewer.scene.activeCamera.position;
 		const target = viewer.scene.activeCamera.target;
 
-
 		// viewer.scene.activeCamera.controls!.enabled = false;
 		//initial position
 		// position.set(-6.96, 0.85, 4.55);
@@ -72,5 +69,21 @@ export const WebgiCanvas = () => {
 		void setupViewer();
 	}, []);
 
-	return <canvas id="webgi-canvas">WebgiCanvas</canvas>;
+	return (
+		<>
+			<div className="webgi-controls">
+				<span className="title">Controls:</span>
+				<span>
+					<b>Rotate:</b> Click and drag.
+				</span>
+				<span>
+					<b>Move:</b> Control and drag.{' '}
+				</span>
+				<span>
+					<b>Zoom:</b> Scroll in and out
+				</span>
+			</div>
+			<canvas id="webgi-canvas"></canvas>
+		</>
+	);
 };

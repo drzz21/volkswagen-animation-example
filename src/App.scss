@@ -4,6 +4,7 @@
 @import 'styles/footer';
 @import 'styles/gallery';
 @import 'styles/more-info';
+@import 'styles/sidemenu';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;0,900;1,400;1,600;1,800;1,900&display=swap');
 
 html {
@@ -39,3 +40,16 @@ body {
 	// background-color: lightgray;
 }
 
+.webgi-controls{
+	background-color: lightgrey;
+	border-radius: 5%;
+	padding: 7px;
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	text-align: left;
+	.title{
+		font-size: 1rem;
+	}
+}

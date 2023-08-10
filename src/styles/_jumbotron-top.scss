@@ -50,6 +50,9 @@
 				font-weight: bold;
 				// margin: 5px;
 				font-size: 3rem;
+				@media(max-width:600px){
+					font-size: 1.9rem;
+				}
 			}
 			.subtitle {
 				font-size: 1.15rem;

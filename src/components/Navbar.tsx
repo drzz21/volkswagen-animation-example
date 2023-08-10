@@ -1,7 +1,11 @@
-export const Navbar = () => {
+export const Navbar: React.FC<{ menuRef:any }> = ({ menuRef }) => {
+	const showMenu = () => {
+		menuRef.current.classList.add('show');
+	};
+
 	return (
-		<nav className="menu" id='top-container'>
-			<div>
+		<nav className="menu" id="top-container">
+			<div onClick={() => showMenu()}>
 				<svg
 					aria-hidden="true"
 					xmlns="http://www.w3.org/2000/svg"
