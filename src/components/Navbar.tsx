@@ -1,6 +1,6 @@
 import { useRef, RefObject } from 'react';
 
-export const Navbar: React.FC<{ menuRef: RefObject<HTMLElement> }> = ({ menuRef }) => {
+export const Navbar: React.FC<{ menuRef: RefObject<HTMLDivElement> }> = ({ menuRef }) => {
 	const refSearch = useRef<HTMLDivElement>(null);
 	const refInputSearch = useRef<HTMLInputElement>(null);
 	const showMenu = () => {

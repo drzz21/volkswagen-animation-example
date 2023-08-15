@@ -1,6 +1,6 @@
-import { useRef } from "react";
+import { RefObject } from 'react';
 
-export const SideMenu:React.FC<{menuRef:any}> = ({menuRef}) => {
+export const SideMenu:React.FC<{menuRef:RefObject<HTMLDivElement> }> = ({menuRef}) => {
 	// const sideMenuRef=useRef(null);
 	const options = [
 		{ title: 'Deals and promotions' },
@@ -10,7 +10,7 @@ export const SideMenu:React.FC<{menuRef:any}> = ({menuRef}) => {
 
 	const hideMenu = () => {
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-		menuRef.current.classList.remove('show');
+		menuRef.current!.classList.remove('show');
 		document.body.style.overflow = "auto"; 
 	};
 

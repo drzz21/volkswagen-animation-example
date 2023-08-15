@@ -2,7 +2,7 @@ import { Navbar } from './components/Navbar';
 import './App.scss';
 import { Jumbotron } from './components/Jumbotron';
 
-import { WebgiCanvas } from './components/WebgiCanvas';
+// import { WebgiCanvas } from './components/WebgiCanvas';
 import { Footer } from './components/Footer';
 import { Gallery } from './components/Gallery';
 import { MoreInfo } from './components/MoreInfo';
@@ -12,13 +12,13 @@ import { Summary } from './components/Summary';
 import gsap from 'gsap';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { RefObject, useRef } from 'react';
+import {  useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 
-	const sideMenuRef=useRef<RefObject<HTMLDivElement>>(null);
+	const sideMenuRef=useRef<HTMLDivElement>(null);
 	return (
 		<>
 			<Navbar menuRef={sideMenuRef}/>

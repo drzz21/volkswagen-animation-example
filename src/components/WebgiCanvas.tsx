@@ -19,7 +19,7 @@ import { useEffect, useRef } from 'react';
 // import { scrollAnimation } from '../lib/animate-scroll';
 
 export const WebgiCanvas = () => {
-	const refControls = useRef(null);
+	const refControls = useRef<HTMLDivElement>(null);
 
 	const setupViewer = async () => {
 		// Initialize the viewer
@@ -53,8 +53,8 @@ export const WebgiCanvas = () => {
 			// plugin.config.clipBackground = true;
 		}
 
-		const position = viewer.scene.activeCamera.position;
-		const target = viewer.scene.activeCamera.target;
+		// const position = viewer.scene.activeCamera.position;
+		// const target = viewer.scene.activeCamera.target;
 
 		// viewer.scene.activeCamera.controls!.enabled = false;
 		//initial position
@@ -73,7 +73,7 @@ export const WebgiCanvas = () => {
 	}, []);
 
 	const toggleHide = () => {
-		refControls.current.classList.toggle('hide');
+		refControls.current!.classList.toggle('hide');
 	};
 
 	return (
