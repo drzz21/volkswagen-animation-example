@@ -11,6 +11,7 @@ export const SideMenu:React.FC<{menuRef:any}> = ({menuRef}) => {
 	const hideMenu = () => {
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
 		menuRef.current.classList.remove('show');
+		document.body.style.overflow = "auto"; 
 	};
 
 	return (

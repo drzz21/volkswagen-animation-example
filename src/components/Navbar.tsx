@@ -1,11 +1,12 @@
 export const Navbar: React.FC<{ menuRef:any }> = ({ menuRef }) => {
 	const showMenu = () => {
 		menuRef.current.classList.add('show');
+		document.body.style.overflow = "hidden"; 
 	};
 
 	return (
 		<nav className="menu" id="top-container">
-			<div onClick={() => showMenu()}>
+			<div onClick={() => showMenu()} style={{cursor:'pointer'}}>
 				<svg
 					aria-hidden="true"
 					xmlns="http://www.w3.org/2000/svg"

@@ -7,6 +7,10 @@
 @import 'styles/sidemenu';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;0,900;1,400;1,600;1,800;1,900&display=swap');
 
+#app {
+	// overflow: hidden;
+}
+
 html {
 }
 * {
@@ -16,6 +20,7 @@ html {
 }
 
 body {
+	// overflow: hidden;
 	// background-color: #001e50;
 	margin: 0;
 	// height: 2000px;
@@ -31,25 +36,48 @@ body {
 	// position: fixed;
 	// top: 360px;
 	width: 100%;
+	height: 100%;
 	// border: 1px solid #001e50;
-	box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
-	-webkit-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
-	-moz-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
+	// box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
+	// -webkit-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
+	// -moz-box-shadow: 3px 4px 15px -3px rgba(0, 0, 0, 0.76);
 	// top: 20px;
 	box-sizing: border-box;
+
 	// background-color: lightgray;
 }
 
-.webgi-controls{
+.webgi-controls {
 	background-color: lightgrey;
 	border-radius: 5%;
 	padding: 7px;
-	width: auto;
-	display: flex;
-	flex-direction: column;
+	// width: 200px;
+	// height: auto;
+
 	position: absolute;
 	text-align: left;
-	.title{
-		font-size: 1rem;
+
+	.hovereableControls {
+		width: 200px;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 1s, width 1s, height 1s,opacity 0.5s;
+		&.hide {
+			height: 0px;
+			width: 0px;
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		.title {
+			font-size: 1rem;
+		}
+	}
+	.logo {
+		height: 20px;
 	}
 }
+

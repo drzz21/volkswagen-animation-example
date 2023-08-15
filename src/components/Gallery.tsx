@@ -2,12 +2,12 @@ import { useState, useRef } from 'react';
 import { WebgiCanvas } from './WebgiCanvas';
 export const Gallery = () => {
 	const baseURL = 'assets/img/gallery/';
-	const options = [
-		{ imgUrl: 'front.png' },
-		{ imgUrl: 'side.png' },
-		{ imgUrl: 'back.png' },
-		{ imgUrl: '3d-view.jpg' },
-	];
+	const [options, setOptions] = useState([
+		{ imgUrl: 'front.png', selected: true },
+		{ imgUrl: 'side.png', selected: false },
+		{ imgUrl: 'back.png', selected: false },
+		{ imgUrl: '3d-view.jpg', selected: false },
+	]);
 
 	const [image, setImage] = useState<string>(options[0].imgUrl);
 	const [show3d, setShow3d] = useState<boolean>(false);
@@ -16,20 +16,27 @@ export const Gallery = () => {
 	const timeoutId = useRef<number>(null); // creamos una referencia para guardar el ID del timeout
 
 	const changeImage = (imgUrl: string, i: number) => {
-		containerRef.current.classList.remove("animate");
+		containerRef.current.classList.remove('animate');
 		if (timeoutId.current) {
 			clearTimeout(timeoutId.current);
 		}
-		
+
 		setTimeout(() => {
-			containerRef.current.classList.add("animate");
-		  }, 10)
-		
+			containerRef.current.classList.add('animate');
+		}, 10);
 
 		const timeout = setTimeout(() => {
 			containerRef.current.classList.remove('animate');
 		}, 800);
 		timeoutId.current = timeout;
+
+		setOptions((prev) =>
+			prev.map((el, ind) =>
+				i === ind
+					? { ...el, selected: true }
+					: { ...el, selected: false }
+			)
+		);
 
 		if (i == options.length - 1) {
 			setShow3d(true);
@@ -37,6 +44,8 @@ export const Gallery = () => {
 		}
 		setImage(imgUrl);
 		setShow3d(false);
+		// console.log(i);
+		
 	};
 
 	return (
@@ -47,7 +56,6 @@ export const Gallery = () => {
 					{show3d ? (
 						<div>
 							<WebgiCanvas />
-							{/* <span>SE RENDERIZA</span> */}
 						</div>
 					) : (
 						<div>
@@ -56,12 +64,13 @@ export const Gallery = () => {
 					)}
 				</div>
 				<div className="gallery-img-list">
-					{options.map(({ imgUrl }, i) => (
+					{options.map(({ imgUrl, selected }, i) => (
 						<div
 							key={imgUrl}
 							onClick={() => changeImage(imgUrl, i)}
+							
 						>
-							<img src={`${baseURL}${imgUrl}`} alt={imgUrl} />
+							<img className={selected ? 'active' : ''} src={`${baseURL}${imgUrl}`} alt={imgUrl} />
 						</div>
 					))}
 				</div>

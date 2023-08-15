@@ -11,13 +11,16 @@ import {
 	// Vector3,
 } from 'webgi';
 
+import infoButton from '../assets/svg/info-button.svg';
 // import gsap from 'gsap';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 // import { scrollAnimation } from '../lib/animate-scroll';
 
 export const WebgiCanvas = () => {
+	const refControls = useRef(null);
+
 	const setupViewer = async () => {
 		// Initialize the viewer
 		const viewer = new ViewerApp({
@@ -69,19 +72,28 @@ export const WebgiCanvas = () => {
 		void setupViewer();
 	}, []);
 
+	const toggleHide = () => {
+		refControls.current.classList.toggle('hide');
+	};
+
 	return (
 		<>
-			<div className="webgi-controls">
-				<span className="title">Controls:</span>
-				<span>
-					<b>Rotate:</b> Click and drag.
-				</span>
-				<span>
-					<b>Move:</b> Control and drag.{' '}
-				</span>
-				<span>
-					<b>Zoom:</b> Scroll in and out
-				</span>
+			<div className="webgi-controls" onClick={toggleHide}>
+				<div >
+					<img src={infoButton} className="logo" alt="" />
+				</div>
+				<div className="hovereableControls" ref={refControls}>
+					<span className="title">Controls:</span>
+					<span>
+						<b>Rotate:</b> Click and drag.
+					</span>
+					<span>
+						<b>Move:</b> Control and drag.{' '}
+					</span>
+					<span>
+						<b>Zoom:</b> Scroll in and out
+					</span>
+				</div>
 			</div>
 			<canvas id="webgi-canvas"></canvas>
 		</>

@@ -1,15 +1,14 @@
 .side-menu {
-	display: none;
 	opacity: 0;
-	// opacity: 0;
-	// pointer-events: none;
+	transition: opacity 0.5s;
+	pointer-events: none;
 	height: 100%;
 	width: 100%;
 	position: fixed;
 	top: 0;
 	background-color: red;
 	// padding-top: 100px;
-	z-index: 1;
+	z-index: 3;
 	padding: 20px;
 	background-color: #003f76;
 	color: white;
@@ -42,36 +41,10 @@
 			}
 		}
 	}
-	@keyframes flash {
-		from {
-			display: none;
-			opacity: 0;
-		}
-
-		to {
-			display: block;
-			opacity: 100%;
-		}
-	}
-	// @keyframes unflash {
-	// 	from {
-	// 		opacity: 0;
-	// 	}
-
-	// 	to {
-	// 		opacity: 100%;
-	// 	}
-	// }
 
 	&.show {
-		animation: flash 0.5s linear;
-		animation-fill-mode: forwards;
-		display: block;
+		opacity: 100%;
+		pointer-events: auto;     
 	}
-	// &:not(.show) {
-	// 	// display: block;
-	// 	pointer-events: none;
-	// 	animation-fill-mode: forwards;
-	// 	animation: flash 0.5s linear reverse;
-	// }
+
 }
