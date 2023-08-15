@@ -12,23 +12,25 @@ export const Gallery = () => {
 	const [image, setImage] = useState<string>(options[0].imgUrl);
 	const [show3d, setShow3d] = useState<boolean>(false);
 
-	const containerRef = useRef(null);
-	const timeoutId = useRef<number>(null); // creamos una referencia para guardar el ID del timeout
+	const containerRef = useRef<HTMLDivElement>(null);
+	const [timeoutId, setTimeoutId] = useState<number | null>(null);
+	// const timeoutId = useRef<number>(null); 
 
 	const changeImage = (imgUrl: string, i: number) => {
-		containerRef.current.classList.remove('animate');
-		if (timeoutId.current) {
-			clearTimeout(timeoutId.current);
+		containerRef.current!.classList.remove('animate');
+		if (timeoutId) {
+			clearTimeout(timeoutId);
 		}
 
 		setTimeout(() => {
-			containerRef.current.classList.add('animate');
+			containerRef.current!.classList.add('animate');
 		}, 10);
 
-		const timeout = setTimeout(() => {
-			containerRef.current.classList.remove('animate');
+		const timeout = window.setTimeout(() => {
+			containerRef.current!.classList.remove('animate');
 		}, 800);
-		timeoutId.current = timeout;
+		// timeoutId.current = timeout;
+		setTimeoutId(timeout);
 
 		setOptions((prev) =>
 			prev.map((el, ind) =>
@@ -45,7 +47,6 @@ export const Gallery = () => {
 		setImage(imgUrl);
 		setShow3d(false);
 		// console.log(i);
-		
 	};
 
 	return (
@@ -68,9 +69,12 @@ export const Gallery = () => {
 						<div
 							key={imgUrl}
 							onClick={() => changeImage(imgUrl, i)}
-							
 						>
-							<img className={selected ? 'active' : ''} src={`${baseURL}${imgUrl}`} alt={imgUrl} />
+							<img
+								className={selected ? 'active' : ''}
+								src={`${baseURL}${imgUrl}`}
+								alt={imgUrl}
+							/>
 						</div>
 					))}
 				</div>

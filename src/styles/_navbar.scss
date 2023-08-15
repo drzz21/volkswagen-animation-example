@@ -2,7 +2,7 @@
 	position: sticky;
 	top: 0;
 	z-index: 2;
-	
+
 	height: 50px;
 	display: flex;
 	justify-content: space-between;
@@ -10,6 +10,53 @@
 	background-color: white;
 	align-items: center;
 	box-shadow: 0 0px 5px -1px rgba(0, 0, 0, 1);
+	.search-section {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.svg-search {
+			position: absolute;
+			right: 0;
+			cursor: pointer;
+		}
+		
+	}
+}
+
+.menu-search{
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	height: 50px;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	width: 100%;
+	pointer-events: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.5s,visibility 0.5s;
+
+	.search-textbox {
+		// display: none;
+		height: 30px;
+		font-size: 1rem;
+		outline: none;
+		border-radius: 20px;
+		border: 1.5px solid lightgray;
+		pointer-events: all;
+		padding-left: 40px;
+		
+		
+		
+		// position: absolute;
+		// right: 0;
+	}
+	&.show{
+		visibility: visible;
+		opacity: 1;
+	}
 }
 
 .menu > div {

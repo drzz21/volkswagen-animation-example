@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const MoreInfo = () => {
 	const baseURL = 'assets/img/';
 	const options = [
