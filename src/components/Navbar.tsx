@@ -1,6 +1,8 @@
 import { useRef, RefObject } from 'react';
 
-export const Navbar: React.FC<{ menuRef: RefObject<HTMLDivElement> }> = ({ menuRef }) => {
+export const Navbar: React.FC<{ menuRef: RefObject<HTMLDivElement> }> = ({
+	menuRef,
+}) => {
 	const refSearch = useRef<HTMLDivElement>(null);
 	const refInputSearch = useRef<HTMLInputElement>(null);
 	const showMenu = () => {
@@ -14,9 +16,9 @@ export const Navbar: React.FC<{ menuRef: RefObject<HTMLDivElement> }> = ({ menuR
 		refInputSearch.current!.focus();
 	};
 
-	const blurSearch=()=>{
+	const blurSearch = () => {
 		refSearch.current!.classList.remove('show');
-	}
+	};
 
 	return (
 		<>
@@ -79,7 +81,7 @@ export const Navbar: React.FC<{ menuRef: RefObject<HTMLDivElement> }> = ({ menuR
 				<input
 					className="search-textbox"
 					type="text"
-					onBlur={()=>blurSearch()}
+					onBlur={() => blurSearch()}
 					ref={refInputSearch}
 				/>
 			</div>
