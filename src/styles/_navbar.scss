@@ -20,11 +20,10 @@
 			right: 0;
 			cursor: pointer;
 		}
-		
 	}
 }
 
-.menu-search{
+.menu-search {
 	position: fixed;
 	top: 0;
 	z-index: 2;
@@ -36,24 +35,34 @@
 	pointer-events: none;
 	visibility: hidden;
 	opacity: 0;
-	transition: opacity 0.5s,visibility 0.5s;
+	transition: opacity 0.5s, visibility 0.5s;
+	.svg-search2 {
+		position: absolute;
+		right: 225px;
+		// margin-right: 20px;
+		@media (max-width:700px){
+			position: absolute;
+			left: 35px;
+		}
+	}
 
 	.search-textbox {
 		// display: none;
-		height: 30px;
+		height: 40px;
+		// width: 100%;
 		font-size: 1rem;
 		outline: none;
 		border-radius: 20px;
 		border: 1.5px solid lightgray;
 		pointer-events: all;
 		padding-left: 40px;
-		
-		
-		
-		// position: absolute;
-		// right: 0;
+		margin-right: 20px;
+		@media (max-width: 700px) {
+			width: 100%;
+			margin-left: 20px;
+		}
 	}
-	&.show{
+	&.show {
 		visibility: visible;
 		opacity: 1;
 	}

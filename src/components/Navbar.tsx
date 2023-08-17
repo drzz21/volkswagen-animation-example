@@ -13,7 +13,11 @@ export const Navbar: React.FC<{ menuRef: RefObject<HTMLDivElement> }> = ({
 	const showSearch = () => {
 		// console.log('search');
 		refSearch.current!.classList.add('show');
-		refInputSearch.current!.focus();
+		setTimeout(()=>{
+			refInputSearch.current!.focus();
+		},100);
+		
+
 	};
 
 	const blurSearch = () => {
@@ -66,7 +70,7 @@ export const Navbar: React.FC<{ menuRef: RefObject<HTMLDivElement> }> = ({
 			</nav>
 			<div className="menu-search" ref={refSearch}>
 				<svg
-					className="svg-search"
+					className="svg-search2"
 					width="24px"
 					height="24px"
 					viewBox="0 0 24 24"
@@ -74,7 +78,7 @@ export const Navbar: React.FC<{ menuRef: RefObject<HTMLDivElement> }> = ({
 					fill="currentColor"
 					role="img"
 					aria-hidden="true"
-					style={{ position: 'absolute', right: 205 }}
+					// style={{ position: 'absolute', right: 205 }}
 				>
 					<path d="M22.771 21.601l-5.591-5.979a9.06 9.06 0 001.837-5.624 8.723 8.723 0 00-9-9 8.699 8.699 0 00-9 9 8.69 8.69 0 009 9 9.18 9.18 0 005.764-1.944l5.53 5.913zm-12.754-4.603a6.697 6.697 0 01-7-7 6.697 6.697 0 017-7 6.697 6.697 0 017 7 6.697 6.697 0 01-7 7z"></path>
 				</svg>
